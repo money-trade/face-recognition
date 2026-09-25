@@ -2,7 +2,7 @@ import cv2
 import os
 
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-name = 'parinya'
+name = 'anuwat'
 i = 1
 os.mkdir(name)
 while True:
