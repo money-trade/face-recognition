@@ -19,7 +19,8 @@ for f in os.listdir():
 X = np.array(X, dtype=float)
 y = np.array(y)
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+# CAP_DSHOW เปิดกล้องเร็วกว่าบน Windows ส่วนระบบอื่นใช้ค่าเริ่มต้น
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW) if os.name == 'nt' else cv2.VideoCapture(0)
 try:
     while True:
         ret, frame = cap.read()
